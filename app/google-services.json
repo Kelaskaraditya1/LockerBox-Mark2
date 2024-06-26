@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "680303961539",
+    "project_id": "locker-box-dad3f",
+    "storage_bucket": "locker-box-dad3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680303961539:android:a798854b9bea05494d0976",
+        "android_client_info": {
+          "package_name": "com.starkindustries.lockerboxmark2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "680303961539-elvjrgfkrricdmii7kmo36c111q1jk8s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.starkindustries.lockerboxmark2",
+            "certificate_hash": "2ad942b31b611fc40f848f9626942b0a9b888309"
+          }
+        },
+        {
+          "client_id": "680303961539-q56dvm98m9p38gfpsthks2n7dvvr03ll.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5ovWo5nYszD3sCsUNzLtMrkojq8UAzPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "680303961539-q56dvm98m9p38gfpsthks2n7dvvr03ll.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

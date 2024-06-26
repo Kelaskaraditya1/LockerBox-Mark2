@@ -9,16 +9,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
 import com.starkindustries.lockerboxmark2.R
 import com.starkindustries.lockerboxmark2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding:ActivityMainBinding
+    lateinit var auth:FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         binding= DataBindingUtil.setContentView(this,R.layout.activity_main)
+        auth=FirebaseAuth.getInstance()
         var animation1=AnimationUtils.loadAnimation(applicationContext,R.anim.app_logo_animation)
         binding.apppLogo.startAnimation(animation1)
         var animaton2 = AnimationUtils.loadAnimation(applicationContext,R.anim.app_text_animation)
@@ -52,6 +56,7 @@ class MainActivity : AppCompatActivity() {
             super.onPostExecute(result)
             var inext = Intent(this@MainActivity,LoginActivity::class.java)
             startActivity(inext)
+            finish()
         }
 
     }
