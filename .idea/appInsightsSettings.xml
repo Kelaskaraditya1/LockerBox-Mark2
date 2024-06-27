@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.starkindustries.lockerboxmark2" />
+                  <option name="mobileSdkAppId" value="1:680303961539:android:a798854b9bea05494d0976" />
+                  <option name="projectId" value="locker-box-dad3f" />
+                  <option name="projectNumber" value="680303961539" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
