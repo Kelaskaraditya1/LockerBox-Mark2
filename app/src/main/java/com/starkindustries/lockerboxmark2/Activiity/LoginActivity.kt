@@ -1,11 +1,13 @@
 package com.starkindustries.lockerboxmark2.Activiity
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.TextUtils
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
+import android.view.Display.Mode
 import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -30,6 +32,8 @@ class LoginActivity : AppCompatActivity() {
     var passed:Boolean=false
     lateinit var auth:FirebaseAuth
     internal lateinit var googleSignInClient: GoogleSignInClient
+    lateinit var sharedPreferences: SharedPreferences
+    lateinit var editor : SharedPreferences.Editor
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -40,6 +44,8 @@ class LoginActivity : AppCompatActivity() {
             .requestIdToken(getString(R.string.default_Id))
             .requestEmail()
             .build()
+        sharedPreferences=getSharedPreferences(Keys.SHARED_PREFRENCE_NAME, MODE_PRIVATE)
+        editor=sharedPreferences.edit()
         binding.password.setOnTouchListener(object: View.OnTouchListener{
             override fun onTouch(view: View?, event: MotionEvent?): Boolean {
                 if(view!=null)
@@ -109,6 +115,8 @@ class LoginActivity : AppCompatActivity() {
                 }
                 else Log.d("userNull","user is null")
                 val intent = Intent(this,DashBoardActivity::class.java)
+                editor.putBoolean(Keys.LOGIN_STATUS,true)
+                editor.apply()
                 startActivity(intent)
             }.addOnFailureListener()
             {
@@ -141,6 +149,10 @@ class LoginActivity : AppCompatActivity() {
                     {
                         if(it.isSuccessful)
                         {
+                            sharedPreferences=getSharedPreferences(Keys.SHARED_PREFRENCE_NAME, MODE_PRIVATE)
+                            editor=sharedPreferences.edit()
+                            editor.putBoolean(Keys.LOGIN_STATUS,true)
+                            editor.apply()
                             val intent = Intent(this,DashBoardActivity::class.java)
                         var user = auth.currentUser
                         user.let {
@@ -162,14 +174,5 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
-    }
-    override fun onStart() {
-        super.onStart()
-        if(auth.currentUser!=null)
-        {
-            startActivity(Intent(this,DashBoardActivity::class.java))
-            Toast.makeText(this, "Welcome "+ auth.currentUser!!.displayName.toString().trim(), Toast.LENGTH_SHORT).show()
-        }
-
     }
 }

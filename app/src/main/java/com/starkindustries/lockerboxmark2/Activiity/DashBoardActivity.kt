@@ -51,15 +51,4 @@ class DashBoardActivity : AppCompatActivity() {
 }
 
 
-// for signout
-//googleSignInClient.signOut().addOnCompleteListener()
-//{
-//    if(it.isSuccessful)
-//    {
-//        val intent = Intent(this,LoginActivity::class.java)
-//        startActivity(intent)
-//    }
-//}.addOnFailureListener()
-//{
-//    Toast.makeText(applicationContext, "Failed to Signout", Toast.LENGTH_SHORT).show()
-//}
+

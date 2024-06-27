@@ -1,19 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.ProfileFragment">
-
-    <TextView
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile Fragment"
-        android:textAppearance="@color/black"
-        android:textSize="25sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:src="@drawable/user">
+        </de.hdodenhof.circleimageview.CircleImageView>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/profileUserName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:text="Kelaskaraditya1"
+            android:textAlignment="center"
+            android:textAppearance="@drawable/user"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold">
+        </androidx.appcompat.widget.AppCompatTextView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:translationY="80dp"
+        android:gravity="center">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginStart="10dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="2"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/black"
+                android:src="@drawable/edit_profile">
+            </de.hdodenhof.circleimageview.CircleImageView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="Edit Profile"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAlignment="textStart"
+                android:textAppearance="@color/black"
+                android:textSize="25dp"
+                android:paddingTop="5dp"
+                >
+            </androidx.appcompat.widget.AppCompatTextView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginStart="10dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="2"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/black"
+                android:src="@drawable/update_password">
+            </de.hdodenhof.circleimageview.CircleImageView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="Update Password"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAlignment="textStart"
+                android:textAppearance="@color/black"
+                android:textSize="25dp"
+                android:paddingTop="5dp">
+            </androidx.appcompat.widget.AppCompatTextView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginStart="10dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="2"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/black"
+                android:src="@drawable/ogout">
+            </de.hdodenhof.circleimageview.CircleImageView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="Logout"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAlignment="textStart"
+                android:textAppearance="@color/black"
+                android:textSize="25dp"
+                android:paddingTop="5dp">
+            </androidx.appcompat.widget.AppCompatTextView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </FrameLayout>

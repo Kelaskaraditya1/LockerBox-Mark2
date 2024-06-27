@@ -11,5 +11,7 @@ class Keys
         const val PHONE_NO="PHONE_NO"
         const val PASSWORD="PASSWORD"
         const val GOOGLE_SIGN_IN__ID=9001
+        const val LOGIN_STATUS="LOGIN_STATUS"
+        const val SHARED_PREFRENCE_NAME="SHARED_PREFRENCE_NAME"
     }
 }
