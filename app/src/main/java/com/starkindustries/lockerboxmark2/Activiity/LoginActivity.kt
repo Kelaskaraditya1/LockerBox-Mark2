@@ -80,6 +80,12 @@ class LoginActivity : AppCompatActivity() {
             val intent = googleSignInClient.signInIntent
             startActivityForResult(intent,Keys.GOOGLE_SIGN_IN__ID)
         }
+        binding.forgotPassword.setOnClickListener()
+        {
+
+            val intent = Intent(this,ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
         binding.loginButton.setOnClickListener()
         {
             val view = this.currentFocus

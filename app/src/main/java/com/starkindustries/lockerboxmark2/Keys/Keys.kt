@@ -10,8 +10,12 @@ class Keys
         const val USERNAME="USERNAME"
         const val PHONE_NO="PHONE_NO"
         const val PASSWORD="PASSWORD"
+        const val FILE_NAME="FILENAME"
+        const val FILE_TYPE="FILE_TYPE"
+        const val FILE_URI="FILE_URI"
         const val GOOGLE_SIGN_IN__ID=9001
         const val LOGIN_STATUS="LOGIN_STATUS"
         const val SHARED_PREFRENCE_NAME="SHARED_PREFRENCE_NAME"
+        const val IMAGES="IMAGES"
     }
 }

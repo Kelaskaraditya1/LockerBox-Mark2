@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:orientation="vertical"
-        >
+        android:layout_marginTop="80dp">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImage"
             android:layout_width="match_parent"
@@ -40,6 +40,7 @@
         android:translationY="80dp"
         android:gravity="center">
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/editProfile"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -57,18 +58,18 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="3.5"
                 android:text="Edit Profile"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textAlignment="textStart"
                 android:textAppearance="@color/black"
                 android:textSize="25dp"
-                android:paddingTop="5dp"
-                >
+                android:paddingTop="5dp">
             </androidx.appcompat.widget.AppCompatTextView>
         </androidx.appcompat.widget.LinearLayoutCompat>
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/updatePassword"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -86,7 +87,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="3.5"
                 android:text="Update Password"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -115,7 +116,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="3.5"
                 android:text="Logout"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -125,7 +126,6 @@
                 android:paddingTop="5dp">
             </androidx.appcompat.widget.AppCompatTextView>
         </androidx.appcompat.widget.LinearLayoutCompat>
-
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </FrameLayout>
