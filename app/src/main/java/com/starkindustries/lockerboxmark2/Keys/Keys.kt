@@ -17,5 +17,11 @@ class Keys
         const val LOGIN_STATUS="LOGIN_STATUS"
         const val SHARED_PREFRENCE_NAME="SHARED_PREFRENCE_NAME"
         const val IMAGES="IMAGES"
+        const val PDF_OPEN_REQ_CODE=101
+        const val MUSIC_OPEN_REQ_CODE=102
+        const val PDFS="PDFS"
+        const val MUSICS="MUSICS"
+        const val VIDEO_OPEN_REQ_CODE=103
+        const val VIDEOS="VIDEOS"
     }
 }

@@ -202,7 +202,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="No file selected yet"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textAlignment="textStart"
                 android:paddingStart="25dp"
                 android:textColor="@color/black"
