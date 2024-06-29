@@ -3,14 +3,19 @@ import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.starkindustries.lockerboxmark2.Fragments.DocumentsListFragment
 import com.starkindustries.lockerboxmark2.Fragments.HomeFragment
+import com.starkindustries.lockerboxmark2.Fragments.ImagesListFragment
+import com.starkindustries.lockerboxmark2.Fragments.MusicListFragment
 import com.starkindustries.lockerboxmark2.Fragments.ProfileFragment
 import com.starkindustries.lockerboxmark2.Fragments.UploadFragment
+import com.starkindustries.lockerboxmark2.Fragments.VideosListFragment
+
 class ViewPagerAdapte(var context:Context,manager:FragmentManager):FragmentPagerAdapter(manager)
 {
     override fun getCount(): Int
     {
-        return 3
+        return 4
     }
 
     override fun getItem(position: Int): Fragment
@@ -19,11 +24,13 @@ class ViewPagerAdapte(var context:Context,manager:FragmentManager):FragmentPager
         when(position)
         {
             0->
-                fragment = HomeFragment()
+                fragment = ImagesListFragment()
             1->
-                fragment = UploadFragment()
+                fragment = DocumentsListFragment()
             2->
-                fragment = ProfileFragment()
+                fragment = MusicListFragment()
+            3->
+                fragment = VideosListFragment()
         }
         return fragment
     }
@@ -32,9 +39,10 @@ class ViewPagerAdapte(var context:Context,manager:FragmentManager):FragmentPager
         lateinit var title:String
         when(position)
         {
-            0-> title="Home"
-            1->title="Upload"
-            2->title="Profile"
+            0-> title="Images"
+            1->title="Documents"
+            2->title="Musics"
+            3->title="Videos"
         }
         return title
     }

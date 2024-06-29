@@ -3,14 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.HomeFragment">
-    <TextView
+    tools:context=".Fragments.HomeFragment"
+    android:padding="5dp">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/titleTabLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Fragment"
-        android:textAppearance="@color/black"
-        android:textSize="25sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:layout_height="60dp">
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/filesViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+    </androidx.viewpager.widget.ViewPager>
 </FrameLayout>

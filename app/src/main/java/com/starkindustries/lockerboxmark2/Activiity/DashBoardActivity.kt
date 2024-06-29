@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -23,7 +24,6 @@ import com.starkindustries.lockerboxmark2.Fragments.ProfileFragment
 import com.starkindustries.lockerboxmark2.Fragments.UploadFragment
 import com.starkindustries.lockerboxmark2.R
 import com.starkindustries.lockerboxmark2.databinding.ActivityDashBoardBinding
-
 class DashBoardActivity : AppCompatActivity() {
     lateinit var binding:ActivityDashBoardBinding
     lateinit var auth:FirebaseAuth
@@ -78,6 +78,10 @@ class DashBoardActivity : AppCompatActivity() {
                 return true
             }
         })
+        val manager = supportFragmentManager
+        val transaction:FragmentTransaction = manager.beginTransaction()
+        transaction.add(R.id.fragment_container,HomeFragment())
+        transaction.commit()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

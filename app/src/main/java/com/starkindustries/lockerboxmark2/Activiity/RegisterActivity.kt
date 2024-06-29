@@ -25,7 +25,6 @@ import com.starkindustries.lockerboxmark2.Keys.Keys
 import com.starkindustries.lockerboxmark2.R
 import com.starkindustries.lockerboxmark2.databinding.ActivityMainBinding
 import com.starkindustries.lockerboxmark2.databinding.ActivityRegisterBinding
-
 class RegisterActivity : AppCompatActivity() {
     lateinit var binding:ActivityRegisterBinding
     var passed=false
