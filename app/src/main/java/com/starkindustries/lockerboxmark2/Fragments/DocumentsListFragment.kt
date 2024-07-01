@@ -131,7 +131,7 @@ class DocumentsListFragment : Fragment() ,PdfListAdapter.OnItemClickListner{
         alertDialog.setPositiveButton("Yes",object: DialogInterface.OnClickListener{
             override fun onClick(dialog: DialogInterface?, which: Int) {
                 val ref = dbRefrence.child(user.displayName.toString().trim()).child(user.uid).child(Keys.PDFS).child(noteId).removeValue()
-                Toast.makeText(context, "Item deleted sucessfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Document deleted sucessfully", Toast.LENGTH_SHORT).show()
             }
         })
         alertDialog.setNegativeButton("No",object: DialogInterface.OnClickListener{
@@ -141,7 +141,6 @@ class DocumentsListFragment : Fragment() ,PdfListAdapter.OnItemClickListner{
         })
         alertDialog.setNeutralButton("Cancel",object: DialogInterface.OnClickListener{
             override fun onClick(dialog: DialogInterface?, which: Int) {
-
             }
         })
         alertDialog.show()

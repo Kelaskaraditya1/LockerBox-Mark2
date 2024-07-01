@@ -154,7 +154,7 @@ class ImagesListFragment : Fragment() ,ImageListAdapter.OnItemClickListner
         alertDialog.setPositiveButton("Yes",object:DialogInterface.OnClickListener{
             override fun onClick(dialog: DialogInterface?, which: Int) {
                 val ref = dbRefrence.child(user.displayName.toString().trim()).child(user.uid).child(Keys.IMAGES).child(noteId).removeValue()
-                Toast.makeText(context, "Item deleted sucessfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Image deleted sucessfully", Toast.LENGTH_SHORT).show()
             }
         })
         alertDialog.setNegativeButton("No",object:DialogInterface.OnClickListener{
