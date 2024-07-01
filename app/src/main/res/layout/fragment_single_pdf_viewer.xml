@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SinglePdfViewerFragment">
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/singlePdfContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp">
+    </com.github.barteksc.pdfviewer.PDFView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dashboardButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="5dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textAppearance="@color/black"
+        android:text="Dashboard"
+        android:textAlignment="center"
+        android:translationY="-15dp">
+    </androidx.appcompat.widget.AppCompatButton>
+</FrameLayout>

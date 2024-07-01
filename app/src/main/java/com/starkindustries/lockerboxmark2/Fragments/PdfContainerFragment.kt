@@ -86,7 +86,7 @@ class PdfContainerFragment : Fragment() {
                     val key = dbRefrence.child(auth.currentUser?.displayName.toString().trim()).child(auth.currentUser?.uid!!).child(Keys.PDFS).push().key
                     if(key!=null)
                     {
-                        val fileStructure=FileStructure(getFileName(uri!!)!!,pdfContainer.getTag().toString().trim(),Keys.PDFS)
+                        val fileStructure=FileStructure(getFileName(uri!!)!!,pdfContainer.getTag().toString().trim(),Keys.PDFS,key.toString().trim())
                         dbRefrence.child(auth.currentUser?.displayName.toString().trim()).child(auth.currentUser?.uid!!).child(Keys.PDFS).child(key).setValue(fileStructure).addOnCompleteListener()
                         {
                             storageReference= FirebaseStorage.getInstance().reference

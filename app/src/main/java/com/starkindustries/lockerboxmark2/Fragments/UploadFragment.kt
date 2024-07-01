@@ -182,7 +182,7 @@ class UploadFragment : Fragment() {
                 val key = dbRefrence.child(auth.currentUser?.displayName.toString().trim()).child(auth.currentUser?.uid!!).child(Keys.IMAGES).push().key
                 if(key!=null)
                 {
-                    val fileStucture = FileStructure(getFileName(data?.data!!)!!,Keys.IMAGES,data?.data!!.toString().trim())
+                    val fileStucture = FileStructure(getFileName(data?.data!!)!!,Keys.IMAGES,data?.data!!.toString().trim(),key?:"")
                     dbRefrence.child(auth.currentUser?.displayName.toString().trim()).child(auth.currentUser?.uid!!).child(Keys.IMAGES).child(key).setValue(fileStucture).addOnCompleteListener()
                     {if(it.isSuccessful)
                     {
@@ -286,7 +286,7 @@ class UploadFragment : Fragment() {
                 val key = dbRefrence.child(user?.displayName.toString().trim()).child(user?.uid!!).child(Keys.MUSICS).push().key
                 if(key!=null)
                 {
-                    val fileStructure = FileStructure(getFileName(data?.data!!)!!,Keys.MUSICS,data?.data!!.toString().trim())
+                    val fileStructure = FileStructure(getFileName(data?.data!!)!!,Keys.MUSICS,data?.data!!.toString().trim(),key.toString().trim())
                     dbRefrence.child(user?.displayName.toString().trim()).child(user?.uid!!).child(Keys.MUSICS).child(key).setValue(fileStructure).addOnCompleteListener()
                     {
                         if(it.isSuccessful)
@@ -330,7 +330,7 @@ class UploadFragment : Fragment() {
                 val key = dbRefrence.child(user?.displayName!!).child(user?.uid!!).child(Keys.VIDEOS).push().key
                 if(key!=null)
                 {
-                    val fileStructure = FileStructure(getFileName(data?.data!!)!!,Keys.VIDEOS,data?.data.toString().trim())
+                    val fileStructure = FileStructure(getFileName(data?.data!!)!!,Keys.VIDEOS,data?.data.toString().trim(),key.toString().trim())
                     dbRefrence.child(user?.displayName!!).child(user?.uid!!).child(Keys.VIDEOS).child(key).setValue(fileStructure).addOnCompleteListener(){
                         if(it.isSuccessful)
                         {

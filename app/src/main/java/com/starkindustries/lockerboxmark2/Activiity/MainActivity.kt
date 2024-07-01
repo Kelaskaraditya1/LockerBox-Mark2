@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             if(auth.currentUser!=null&&sharedPreferences.getBoolean(Keys.LOGIN_STATUS,false))
             {
                 startActivity(Intent(this@MainActivity,DashBoardActivity::class.java))
-                Toast.makeText(applicationContext, "Welcome back "+auth.currentUser?.displayName.toString().trim()+" !!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Salam "+auth.currentUser?.displayName.toString().trim()+" bhai !!", Toast.LENGTH_SHORT).show()
             }
             else
             {

@@ -23,5 +23,6 @@ class Keys
         const val MUSICS="MUSICS"
         const val VIDEO_OPEN_REQ_CODE=103
         const val VIDEOS="VIDEOS"
+        const val NOTE_ID="NOTE_ID"
     }
 }

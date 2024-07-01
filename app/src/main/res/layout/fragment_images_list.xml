@@ -4,15 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.ImagesListFragment">
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imagesRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Images List"
-        android:gravity="center"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/emptyTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No Images uploaded yet."
+        android:textAppearance="@color/black"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="25sp"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        android:textAppearance="@color/black">
-    </TextView>
+        android:visibility="gone">
+    </androidx.appcompat.widget.AppCompatTextView>
 </FrameLayout>
